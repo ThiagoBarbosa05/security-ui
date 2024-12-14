@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={`${roboto.className} antialiased dark`}
       >
-        <main className="flex flex-col min-h-screen md:py-5">{children}</main>
+        <main className="flex flex-col min-h-screen px-5">{children}</main>
         <Toaster
           toastOptions={{
             classNames: {

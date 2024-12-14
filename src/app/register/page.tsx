@@ -13,7 +13,7 @@ import { CreateAccount } from "@/components/create-account-form";
 
 export default function Page() {
   return (
-    <div className="flex flex-col  items-center justify-center min-h-screen p-5">
+    <div className="flex flex-col items-center justify-center min-h-screen">
       <Card>
         <CardHeader>
           <CardTitle>Crie uma conta</CardTitle>
