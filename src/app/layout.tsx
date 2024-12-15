@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {Roboto}  from 'next/font/google'
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 
@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 };
 
 const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', "500", '700']
-})
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 export default function RootLayout({
   children,
@@ -20,10 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${roboto.className} antialiased dark`}
-      >
-        <main className="flex flex-col min-h-screen px-5">{children}</main>
+      <body className={`${roboto.className} antialiased dark`}>
+        <main className="flex flex-col min-h-screen md:py-5">{children}</main>
         <Toaster
           toastOptions={{
             classNames: {

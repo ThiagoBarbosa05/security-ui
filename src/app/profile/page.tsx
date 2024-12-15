@@ -50,7 +50,7 @@ export default async function Page() {
   const imageProfile = profile.avatar ? imageUrl : "/avatar.png";
 
   return (
-    <div className="w-full max-w-[768px] md:rounded-md flex-1 md:border mx-auto flex flex-col items-center">
+    <div className="w-full max-w-[768px] md:rounded-md md:my-5 flex-1 md:border mx-auto flex flex-col items-center">
       <div className="w-full rounded-md  min-h-[540px] flex flex-col items-center overflow-hidden">
         <div className="relative w-full">
           <Logout />
