@@ -32,6 +32,7 @@ export async function createAccount(formState: FormState, formData: FormData) {
   const firstName = formData.get("firstName");
   const lastName = formData.get("lastName");
   const matchingPassword = formData.get("matchingPassword");
+
   try {
     const account = createAccountSchema.parse({
       email,

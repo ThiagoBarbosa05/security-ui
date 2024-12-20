@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
 const loginSchema = z.object({
-  email: z.string().toLowerCase(),
+  email: z.string().email({ message: "Insira seu email" }).toLowerCase(),
   password: z.string().min(1, { message: "Preencha esse campo com sua senha" }),
 });
 

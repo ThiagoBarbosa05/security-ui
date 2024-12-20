@@ -27,6 +27,8 @@ export function LoginForm() {
     }
   }, [formState.status, formState.message]);
 
+  console.log(formState);
+
   return (
     <form className="flex flex-col gap-4" action={action}>
       <div>
@@ -38,6 +40,11 @@ export function LoginForm() {
           name="email"
           defaultValue={formState.payload?.get("email") as string}
         />
+        {formState.fieldErrors.email && (
+          <span className="text-red-400 text-xs block mt-1">
+            {formState.fieldErrors.email}
+          </span>
+        )}
       </div>
       <div>
         <Label htmlFor="password">Senha:</Label>
@@ -48,6 +55,11 @@ export function LoginForm() {
           placeholder="sua senha"
           defaultValue={formState.payload?.get("password") as string}
         />
+        {formState.fieldErrors.password && (
+          <span className="text-red-400 text-xs block mt-1">
+            {formState.fieldErrors.password}
+          </span>
+        )}
         <Link
           className="underline text-xs mt-2 inline-block text-zinc-300"
           href="/auth/reset/password"
